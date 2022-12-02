@@ -25,8 +25,6 @@ func main() {
     defer con.Close()
     con.Connect()
 
-    buf := make([]byte, 1)
-
     // Set tty break for read keyboard input directly
     exec.Command("stty", "-F", "/dev/tty", "cbreak", "min", "1").Run()
     defer exec.Command("stty", "-F", "/dev/tty", "-cbreak").Run()
