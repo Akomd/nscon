@@ -35,7 +35,6 @@ func main() {
 
     go func() {
         for {
-            os.Stdin.Read(buf)
             setInput(&con.Input.Button.A)
             log.Printf("%c: Press A!", time.Now())
             time.Sleep(time.Millisecond * 250)
